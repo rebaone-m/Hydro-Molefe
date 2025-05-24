@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro Molefe - Official Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8e6d4;
+            /* Light earthy beige */
+            color: #2a1c0e;
+            /* Dark brown for contrast */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #cd5c5c 100%);
+            /* Brown to reddish gradient */
+            color: #fff5e1;
+            /* Off-white for text */
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 5px solid #d4a017;
+            /* Golden yellow border */
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #fff5e1;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            background-color: rgba(139, 69, 19, 0.7);
+            /* Semi-transparent brown */
+            border-radius: 50%;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #8b4513;
+            /* Solid brown on hover */
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #d4a017;
+            /* Golden yellow */
+            border: 2px solid #fff5e1;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #cd5c5c;
+            /* Vibrant red */
+        }
+
+        .bio,
+        .work,
+        .productions,
+        .instruments,
+        .clients,
+        .download {
+            background-color: #fff5e1;
+            /* Off-white background */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(205, 92, 92, 0.2);
+            /* Light red shadow */
+            border-left: 5px solid #d4a017;
+            /* Golden yellow accent */
+        }
+
+        .bio h2,
+        .work h2,
+        .productions h2,
+        .instruments h2,
+        .clients h2,
+        .download h2 {
+            color: #8b4513;
+            /* Dark brown */
+        }
+
+        .bio p,
+        .work p,
+        .productions p,
+        .instruments p,
+        .clients p,
+        .download p {
+            margin: 10px 0;
+        }
+
+        .clients .client-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .clients img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #d4a017;
+            object-fit: contain;
+        }
+
+        .download a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cd5c5c;
+            /* Vibrant red */
+            color: #fff5e1;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download a:hover {
+            background-color: #8b4513;
+            /* Dark brown on hover */
+        }
+
+        .links {
+            background-color: #e0d1b9;
+            /* Light tan */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .links h2 {
+            color: #cd5c5c;
+            /* Vibrant red */
+        }
+
+        .links a {
+            color: #1e90ff;
+            /* Dodger blue for links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #ff4500;
+            /* Orange-red on hover */
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #8b4513;
+            /* Dark brown */
+            color: #fff5e1;
+            /* Off-white */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hydro Molefe</h1>
+        </header>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="media/image_1.jpeg" alt="Hydro Molefe Traditional Attire">
+            </div>
+            <div class="mySlides">
+                <img src="media/image_2.jpeg" alt="Hydro Molefe Performance">
+            </div>
+            <div class="mySlides">
+                <img src="media/image_3.jpeg" alt="Hydro Molefe Studio">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="bio">
+            <h2>About Hydro Molefe</h2>
+            <p>Hydro Molefe, born Thabang Molefe, is a Motswana singer-songwriter and musician based in Gaborone,
+                Botswana. His healing music blends traditional Botswana sounds with smooth jazz and afro-contemporary
+                styles. Inspired by folk, improvised, and instrumental music, Hydro's melodic style reflects his deep
+                roots in traditional dance and percussion. His debut album, <em>Dimapo</em>, is an eight-song journey
+                featuring instruments like marimba, setinkane, and African drums, aiming to bring peace and
+                enlightenment through culturally rich music.</p>
+            <p>Born and raised in Old Naledi, a hub for Botswana's finest artists, Hydro follows in the footsteps of
+                vocal trailblazers like Lekofi Sejeso, George Swabi, Stika Sola, Setampore, and Ratsie Sethako. His
+                passion for folk music was kindled by his love of traditional dance and percussion, leading him to win
+                numerous local talent shows, including President and constituency competitions.</p>
+        </div>
+        <div class="work">
+            <h2>The Artist At Work</h2>
+            <p>Some of the shows Hydro has performed at include:</p>
+            <p>IWG Opening & Closing Ceremony</p>
+            <p>President's Concert (Maitisong)</p>
+            <p>Pula on Broadway (Pula Ensemble)</p>
+            <p>DEBSWANA Award Ceremony (Mophato Dance Theatre)</p>
+            <p>Maitisong Festival (Mogwana Traditional Song and Dance Troupe)</p>
+            <p>Letsatsi Dance Theatre of Botswana (Celebration of K)</p>
+            <p>Fashion Show (Mobini Academy)</p>
+        </div>
+        <div class="productions">
+            <h2>Productions</h2>
+            <p>ITB Berlin 2017 - Berlin, Germany</p>
+            <p>Botswana on Broadway USA, New York</p>
+            <p>Battery Dance Festival (Mophato Dance Theatre) USA, New York</p>
+        </div>
+        <div class="instruments">
+            <h2>Instruments</h2>
+            <p>Setinkane</p>
+            <p>Segaba</p>
+            <p>Marimba</p>
+            <p>African Drums</p>
+        </div>
+        <div class="clients">
+            <h2>Clients Worked With</h2>
+            <p>Here are some of the clients Hydro Molefe has collaborated with:</p>
+            <div class="client-gallery">
+                <img src="media/1.jfif" alt="Client 1 Logo">
+                <img src="media/2.jpg" alt="Client 2 Logo">
+                <img src="media/3.jfif" alt="Client 3 Logo">
+                <img src="media/4.jfif" alt="Client 4 Logo">
+                <img src="media/5.jfif" alt="Client 6 Logo">
+                <img src="media/6.jfif" alt="Client 7 Logo">
+                <img src="media/7.jfif" alt="Client 8 Logo">
+                <img src="media/8.jpg" alt="Client 9 Logo">
+                <img src="media/9.jfif" alt="Client 10 Logo">
+                <img src="media/10.jpg" alt="Client 11 Logo">
+                <img src="media/11.jfif" alt="Client 11 Logo">
+            </div>
+        </div>
+        <div class="download">
+            <h2>Download Artist Profile</h2>
+            <p>Want to learn more about Hydro Molefe? Download his full artist profile here:</p>
+            <a href="media/Artist_Profile.pdf" target="_blank">Download PDF</a>
+        </div>
+        <div class="links">
+            <h2>Connect & Listen</h2>
+            <a href="https://www.instagram.com/hydromolefe?igsh=czdkamlhanpuYjUw" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/share/1EruwWGcq6/?mibextid=wwXIfr" target="_blank">Facebook</a>
+            <a href="https://music.apple.com/bw/artist/hydro-molefe/1792511616" target="_blank">Apple Music</a>
+        </div>
+        <footer>
+            <p>© 2025 Hydro Molefe. All rights reserved. Designed by Rebaone Lesly Mochabeng</p>
+        </footer>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
